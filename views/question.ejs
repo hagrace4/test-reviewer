@@ -1,0 +1,24 @@
+<h1><%= question.question %></h1>
+<form>
+  <label>
+    <input type="radio" name="option" value="A">
+    <%= question.options.A %>
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="option" value="B">
+    <%= question.options.B %>
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="option" value="C">
+    <%= question.options.C %>
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="option" value="D">
+    <%= question.options.D %>
+  </label>
+  <br>
+  <button type="submit">Submit</button>
+</form>
