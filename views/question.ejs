@@ -5,44 +5,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Question</title>
+  <style>
+    .option-label {
+      display: block;
+      margin-bottom: 40px;
+    }
+    #message {
+      font-size: large;
+
+    }
+  </style>
 </head>
 
 <body>
   <h1>
     <%= question.question %>
   </h1>
+  <div>
   <form id="question-form" action="/question" method="POST">
     <!-- Add a hidden input to store the question ID -->
     <input type="hidden" name="questionId" value="<%= question._id %>">
-    <label>
+    <label class="option-label">
       <input type="radio" name="answer" value="A">
       <%= question.options.A %>
     </label>
     <br>
-    <label>
+    <label class="option-label">
       <input type="radio" name="answer" value="B">
       <%= question.options.B %>
     </label>
     <br>
-    <label>
+    <label class="option-label">
       <input type="radio" name="answer" value="C">
       <%= question.options.C %>
     </label>
     <br>
-    <label>
+    <label class="option-label">
       <input type="radio" name="answer" value="D">
       <%= question.options.D %>
     </label>
     <br>
-    <button type="submit">Submit</button>
+    <button type="submit" style="width: 100px; height: 75px">Submit</button>
   </form>
     <!-- Add a placeholder for the message -->
-    <div id="message"></div>
+    <div id="message" ></div>
   <form action="/question" method="GET">
     <br></br>
-    <button type="submit">New Question</button>
+    <button type="submit" style="width: 100px; height: 75px">New Question</button>
   </form>
-
+</div>
 
 
   <script>
