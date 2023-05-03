@@ -80,7 +80,7 @@ async function getAllQuestionIds() {
 module.exports = router;
 
 
-mongoose.connect('mongodb+srv://user:user@cluster0.vo3v4qz.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://user:user@final-cluster0.waszbq8.mongodb.net/?retryWrites=true&w=majority', {
 }).then(() => {
   console.log('Connected to database!');
 }).catch((err) => {
